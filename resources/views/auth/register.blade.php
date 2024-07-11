@@ -71,12 +71,7 @@
             <div class="text-center">
                 <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Registrar</button>
             </div>
-            <p class="mt-4 text-sm text-center">
-                @if (Route::has('login.request'))
-                    <a href="{{ route('login.request') }}">
-                        {{ __('¿Ya tienes una cuenta?') }}
-                    </a>
-                @endif
+            <p class="mt-4 text-sm text-center">¿Ya tienes una cuenta?
             <a href="{{ route('login') }}" class="text-primary text-gradient font-weight-bold">Iniciar Sesion</a>
             </p>
         </form>
