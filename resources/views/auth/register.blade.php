@@ -29,7 +29,7 @@
         </div>
         </div>
         <div class="card-body">
-        <form method="POST" action="{{ route('register') }}">
+        <form action="{{ route('register') }}" method="POST">
             @csrf
             <div class="input-group input-group-outline my-3">
                 <label class="form-label" for="name"></label>
