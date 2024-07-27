@@ -69,7 +69,7 @@
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
         <img src="{{ asset('admin/img/logo-ct.png') }}" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold text-white">Material Dashboard 2</span>
+        <span class="ms-1 font-weight-bold text-white">Meerkatbot Dashboardt</span>
       </a>
     </div>
     <hr class="horizontal light mt-0 mb-2">
@@ -135,7 +135,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/sign-in.html">
+          <a class="nav-link text-white " href="{{ route('login') }}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">login</i>
             </div>
@@ -143,7 +143,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/sign-up.html">
+          <a class="nav-link text-white " href="{{ route('register') }}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">assignment</i>
             </div>
@@ -272,10 +272,13 @@
               </ul>
             </li>
             <li class="nav-item d-flex align-items-center">
-              <a href="../pages/sign-in.html" class="nav-link text-body font-weight-bold px-0">
-                <i class="fa fa-user me-sm-1"></i>
-                <span class="d-sm-inline d-none">Sign In</span>
-              </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+                <a href="{{ route('logout') }}" class="nav-link text-body font-weight-bold px-0" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <i class="fa fa-user me-sm-1"></i>
+                    <span class="d-sm-inline d-none">Cerrar Sesión</span>
+                </a>
             </li>
           </ul>
         </div>
